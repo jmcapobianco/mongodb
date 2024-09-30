@@ -5,7 +5,7 @@ const uriDb = process.env.URI_DB;
 
 const clientMongo = new MongoClient(uriDb);
 
-const createConnectionMongo = async () => client {
+const createConnectionMongo = async () => {
     await clientMongo.connect();
     console.log("Conexion a la base de datos establecida.");   
 };
