@@ -1,7 +1,7 @@
 {
   "name": "mongo-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Mongo app - UTN",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "mongodb": "^6.8.0"
   }
 }

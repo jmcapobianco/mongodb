@@ -1,11 +1,11 @@
 import net from "node:net";
 import dotenv from "dotenv";
+import { readHistory } from "../utils/handleHistory";
 dotenv.config();
 
 const options = {
     port: process.env.PORT ?? 2323,
     host: process.env.HOST ?? "localhost",
-
 };
 
 const clientTCP = net.connect(options);
@@ -14,9 +14,10 @@ clientTCP.on("connect", () => {
     console.log("Client connected");
     const args = process.argv.splice(2);
 
-    console.write(JSON.stringify(args));
+    clientTCP.write(JSON.stringify(args));
+
     
     clientTCP.end();
 });
-
+    
 
